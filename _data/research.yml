@@ -1,0 +1,35 @@
+- title: Offshore geotechnics
+  slug: offshore
+  summary: Torpedo anchors, offshore foundation response, soil–structure interaction and monotonic / cyclic loading.
+  bullets:
+    - Undrained strength profiles and axial resistance
+    - FEM benchmarking, calibration and traceable comparisons
+    - Long-term and cyclic behavior (research roadmap)
+- title: Computational & numerical geotechnics
+  slug: numerical
+  summary: Reproducible analysis, FEM verification, post-processing, constitutive models and uncertainty.
+  bullets:
+    - PLAXIS 3D result processing and model verification
+    - Soil constitutive models and sensitivity analysis
+    - Analytical / numerical cross-checks
+- title: Soil dynamics & seismic hazard
+  slug: seismic
+  summary: Earthquake catalogs, probabilistic hazard, local site effects and geophysical methods.
+  bullets:
+    - Catalog quality control and descriptive analysis
+    - Soil dynamics, site amplification and response
+    - MASW, bender elements and seismic properties
+- title: Ground improvement & engineering practice
+  slug: improvement
+  summary: Soft-soil behavior, rigid and semi-rigid inclusions, piles, excavations and geotechnical design.
+  bullets:
+    - Settlement, consolidation and drains
+    - Micropiles, stone columns and shallow foundations
+    - Site characterization and design
+- title: Data science for geotechnics
+  slug: data
+  summary: Computational workflows that combine field / laboratory evidence, visualization, GIS and Python.
+  bullets:
+    - Geospatial interpretation and geostatistics
+    - Parameter estimation and uncertainty
+    - Transparent notebooks and sharable datasets

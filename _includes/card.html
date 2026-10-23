@@ -1,0 +1,7 @@
+<article class="content-card" data-item data-topic="{{ include.item.topic | default: '' | downcase }}" data-search="{{ include.item.title | append: ' ' | append: include.item.summary | downcase | escape }}">
+  <div class="card-meta"><span>{{ include.item.section | default: include.kind | default: 'Geotechnics' }}</span>{% if include.item.status %}<span class="status">{{ include.item.status }}</span>{% endif %}</div>
+  <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+  <p>{{ include.item.summary | default: include.item.description }}</p>
+  {% if include.item.topic %}<div class="tag">{{ include.item.topic }}</div>{% endif %}
+  <a class="card-link" href="{{ include.item.url | relative_url }}">Explore <span aria-hidden="true">→</span></a>
+</article>

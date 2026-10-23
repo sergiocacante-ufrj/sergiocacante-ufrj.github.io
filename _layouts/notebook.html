@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="page-hero"><div class="container"><a class="back-link" href="{{ '/notebooks/' | relative_url }}">← Notebook library</a>
+  <div class="eyebrow">{{ page.section }} · {{ page.status }}</div><h1>{{ page.title }}</h1><p class="lede">{{ page.summary }}</p>
+  {% if page.topic %}<span class="pill">{{ page.topic }}</span>{% endif %}
+</div></div>
+<article class="container prose article-body">
+  {{ content }}
+  {% if page.notebook_file %}
+  <div class="action-panel">
+   <h2>Use this notebook</h2>
+   <p>This is an educational reproducible example with synthetic input data, not a validated project dataset.</p>
+   <div class="action-row">
+    {% if page.notebook_html %}<a class="button button-primary" href="{{ page.notebook_html | relative_url }}">View executed HTML ↗</a>{% endif %}
+    <a class="button" href="{{ page.notebook_file | relative_url }}" download>Download .ipynb</a>
+    {% if site.show_colab_links %}<a class="button" target="_blank" rel="noopener" href="https://colab.research.google.com/github/{{ site.github_username }}/{{ site.github_repo }}/blob/main/{{ page.notebook_file }}">Run in Colab ↗</a>{% endif %}
+   </div>
+   {% unless site.show_colab_links %}<p class="hint">Colab activation is pending publication of the notebook sources to the configured GitHub repository.</p>{% endunless %}
+  </div>
+  {% else %}<div class="note-box"><strong>Planned workflow</strong><p>The original notebook, dataset and external execution links have not been added. No executable source is implied.</p></div>{% endif %}
+  <div class="note-box"><strong>Scope and limitations</strong><p>Numerical examples are for documentation and education. For engineering decisions verify input provenance, methods, units, numerical accuracy and model assumptions.</p></div>
+</article>

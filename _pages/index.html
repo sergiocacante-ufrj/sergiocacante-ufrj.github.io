@@ -1,0 +1,32 @@
+---
+layout: default
+permalink: /
+title: Home
+---
+<section class="home-hero"><div class="container hero-grid">
+  <div><div class="eyebrow">Geotechnical Engineering · Research · Computation</div>
+    <h1>Connecting soil mechanics with reproducible computation.</h1>
+    <p>Research in offshore geotechnics, numerical modelling, soil dynamics and applied engineering — documented through transparent projects, executable notebooks and interactive Geo Apps.</p>
+    <div class="hero-actions"><a class="button button-primary" href="{{ '/research/' | relative_url }}">Explore research →</a><a class="button button-ghost" href="{{ '/notebooks/' | relative_url }}">Computational notebooks</a></div>
+  </div>
+  <div class="hero-visual">
+    <svg viewBox="0 0 350 245" role="img" aria-label="Conceptual offshore torpedo anchor section with depth strength profiles">
+     <rect width="350" height="245" rx="10" fill="#0a3045" opacity=".5"/>
+     <path d="M0 57 Q75 50 145 57 T350 57" fill="none" stroke="#8fcbdb" stroke-width="2.5"/>
+     <path d="M0 85 Q65 76 150 84 T350 84" fill="none" stroke="#e0d4b7" stroke-width="1.5" stroke-dasharray="6 4"/>
+     <path d="M0 135 Q65 124 150 135 T350 135" fill="none" stroke="#b9a993" stroke-width="1.5" stroke-dasharray="6 4"/>
+     <path d="M0 194 Q65 186 150 194 T350 194" fill="none" stroke="#a18c83" stroke-width="1.5" stroke-dasharray="6 4"/>
+     <g stroke="#badbd9" stroke-width="2" fill="#54a8a9"><path d="M171 44 L183 44 L183 155 L177 179 L171 155Z"/><path d="M171 94 L152 103 L152 111 L171 105"/><path d="M183 94 L202 103 L202 111 L183 105"/></g>
+     <path d="M234 182 L307 94" stroke="#acdfbc" stroke-width="3"/><path d="M234 182 L234 77" stroke="#7ab7d0" stroke-width="1.5"/><path d="M234 182 L321 182" stroke="#7ab7d0" stroke-width="1.5"/>
+     <g font-family="monospace" font-size="11" fill="#d4e5ec"><text x="18" y="31">OFFSHORE GEOTECHNICS</text><text x="240" y="206">sᵤ = k · z</text><text x="16" y="225">CONCEPT SKETCH / NOT TO SCALE</text></g>
+    </svg>
+    <div class="visual-caption">Field evidence → numerical models → engineering insight</div>
+  </div>
+</div></section>
+<section class="section"><div class="container"><div class="section-top"><div><div class="eyebrow">Focus areas</div><h2>Research grounded in engineering questions</h2><p>From offshore soil–structure interaction to seismic characterization.</p></div><a class="button" href="{{ '/research/' | relative_url }}">All research areas →</a></div>
+<div class="grid grid-3">
+{% for focus in site.data.research limit:3 %}<article class="topic-card"><div class="eyebrow">0{{ forloop.index }} / Research</div><h3>{{ focus.title }}</h3><p>{{ focus.summary }}</p><a class="card-link" href="{{ '/research/' | relative_url }}#{{ focus.slug }}">See focus →</a></article>{% endfor %}
+</div></div></section>
+<section class="section section-alt"><div class="container"><div class="section-top"><div><div class="eyebrow">Reproducible analysis</div><h2>Notebooks as research documents</h2><p>Source code, declared assumptions, results, figures and verified execution methods.</p></div><a class="button" href="{{ '/notebooks/' | relative_url }}">Browse notebooks →</a></div><div class="grid grid-3">{% assign displayed = site.notebooks | where: 'featured', true %}{% for item in displayed limit:3 %}{% include card.html item=item %}{% endfor %}</div></div></section>
+<section class="section"><div class="container"><div class="section-top"><div><div class="eyebrow">From research to use</div><h2>Engineering projects & Geo Apps</h2><p>Applied case studies alongside intuitive tools that run directly in your browser.</p></div></div><div class="grid grid-3">{% assign featuredprojects = site.projects | where: 'featured', true %}{% for item in featuredprojects limit:2 %}{% include card.html item=item %}{% endfor %}{% assign demo = site.geoapps | where: 'featured', true %}{% for item in demo limit:1 %}{% include card.html item=item %}{% endfor %}</div></div></section>
+<section class="section section-alt"><div class="container"><div class="callout-row"><div class="callout"><div class="eyebrow">Engineering practice</div><h3>Geocerto consulting</h3><p class="minor">Geotechnical analysis, hazard and risk studies, FEM modelling and engineering design services in Colombia.</p><a class="card-link" href="{{ '/services/' | relative_url }}">Explore services →</a></div><div class="callout"><div class="eyebrow">Open academic notes</div><h3>Constitutive models, lab tests & soil dynamics</h3><p class="minor">Developing a curated technical knowledge base connected to notebook examples and primary references.</p><a class="card-link" href="{{ '/knowledge/' | relative_url }}">Read knowledge notes →</a></div></div></div></section>

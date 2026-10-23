@@ -1,0 +1,7 @@
+---
+layout: default
+permalink: /projects/
+title: Projects
+---
+<div class="page-hero"><div class="container"><div class="eyebrow">Selected projects</div><h1>Research & engineering portfolio</h1><p class="lede">Documenting project objectives, methods, assumptions, verification and reproducible material where it can be released.</p></div></div>
+<section class="section"><div class="container"><div class="grid grid-3">{% for item in site.projects %}{% include card.html item=item %}{% endfor %}</div></div></section>

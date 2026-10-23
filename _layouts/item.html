@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="page-hero"><div class="container"><a class="back-link" href="{{ page.parent | default: '/projects/' | relative_url }}">← Back to collection</a>
+  <div class="eyebrow">{{ page.section }} {% if page.status %}· {{ page.status }}{% endif %}</div>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ page.summary }}</p>
+  {% if page.topic %}<span class="pill">{{ page.topic }}</span>{% endif %}
+</div></div>
+<article class="container prose article-body">
+  {{ content }}
+  {% if page.app_url %}<p><a class="button button-primary" href="{{ page.app_url | relative_url }}">Open standalone app ↗</a></p>{% endif %}
+  {% if page.external_url %}<p><a class="button button-primary" href="{{ page.external_url }}" target="_blank" rel="noopener">Open original resource ↗</a></p>{% endif %}
+  <div class="note-box"><strong>Evidence and status</strong><p>Draft content and proposed workflows are distinguished from verified results. Sources, reproducible data and references should be attached before publication.</p></div>
+</article>

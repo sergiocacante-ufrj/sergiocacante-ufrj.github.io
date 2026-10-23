@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /notebooks/
+title: Notebooks
+---
+<div class="page-hero"><div class="container"><div class="eyebrow">Computational library</div><h1>Reproducible notebooks</h1><p class="lede">From transparent data loading and quality checks to numerical analysis and repeatable figures — with source, HTML and online execution where appropriate.</p></div></div>
+<section class="section"><div class="container"><div class="section-top"><div><h2>Library</h2><p>Filter by title and topic. Examples are explicitly labeled.</p></div></div>
+<div class="filter-bar"><input data-notebook-search type="search" aria-label="Search notebooks" placeholder="Search notebook topics…"><select data-notebook-topic aria-label="Filter topic"><option value="">All topics</option><option value="offshore">Offshore</option><option value="soil mechanics">Soil mechanics</option><option value="seismic">Seismic</option><option value="numerical">Numerical</option><option value="consolidation">Consolidation</option></select></div>
+<div class="grid grid-3" data-notebooks-grid>{% for item in site.notebooks %}{% include card.html item=item %}{% endfor %}</div>
+<p data-no-results class="empty-message" hidden>No notebooks match these filters.</p>
+</div></section>
+<section class="section section-alt"><div class="container"><div class="eyebrow">Method</div><h2>Notebook-to-publication workflow</h2><div class="steps">{% for item in site.data.workflow %}<div class="step"><div class="step-num">{{ item.step }}</div><h3>{{ item.title }}</h3><p>{{ item.description }}</p></div>{% endfor %}</div>
+<div class="callout-row"><div class="callout"><h3>Read & reproduce</h3><p class="minor">Source notebooks are stored in <code>notebooks-src/</code>. Static HTML reports in <code>assets/notebooks/</code> can be viewed on GitHub Pages without Python on the server.</p></div><div class="callout"><h3>Run online</h3><p class="minor">Google Colab (after repository publication) runs public Python notebooks in a remote environment. Binder or JupyterLite are later options with different dependency limits. Licensed PLAXIS itself is not hosted on GitHub Pages.</p></div></div>
+</div></section>

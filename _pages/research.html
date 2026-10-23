@@ -1,0 +1,8 @@
+---
+layout: default
+permalink: /research/
+title: Research
+---
+<div class="page-hero"><div class="container"><div class="eyebrow">Research</div><h1>Research directions</h1><p class="lede">Research questions, numerical methods and field or laboratory evidence — organized by topic rather than by file format.</p></div></div>
+<section class="section"><div class="container"><div class="grid grid-2">{% for focus in site.data.research %}<section class="topic-card" id="{{ focus.slug }}"><div class="eyebrow">Research field 0{{ forloop.index }}</div><h3>{{ focus.title }}</h3><p>{{ focus.summary }}</p><ul>{% for b in focus.bullets %}<li>{{ b }}</li>{% endfor %}</ul></section>{% endfor %}</div></div></section>
+<section class="section section-alt"><div class="container"><h2>Follow the evidence</h2><p class="minor">Each research direction connects to research projects, notebooks, Geo Apps, notes and presentations. Experimental and validated outputs will be distinguished from illustrative material.</p><div class="hero-actions"><a class="button" href="{{ '/projects/' | relative_url }}">Research projects →</a><a class="button" href="{{ '/notebooks/' | relative_url }}">Notebook workflows →</a></div></div></section>

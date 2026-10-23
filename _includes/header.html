@@ -1,0 +1,15 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home — Sergio Cacante">
+      <img src="{{ '/assets/images/geotech-mark.svg' | relative_url }}" alt="" width="40" height="40">
+      <span><strong>SERGIO CACANTE</strong><small>GEOTECH · RESEARCH · CODE</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+      {% for link in site.data.navigation %}
+      <a href="{{ link.url | relative_url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

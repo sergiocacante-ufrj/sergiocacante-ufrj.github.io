@@ -1,0 +1,15 @@
+- step: '01'
+  title: Inputs & provenance
+  description: Identify source, units, coordinate system, licenses and admissible datasets. Never upload confidential client data.
+- step: '02'
+  title: Notebook analysis
+  description: Separate parameters, data loading, methods, checks, graphics and results using version-controlled notebooks.
+- step: '03'
+  title: Verification
+  description: Compare with reference equations, benchmarks, sensitivity analyses and independent checks.
+- step: '04'
+  title: Publication
+  description: Export read-only HTML/PDF for the website and retain the .ipynb source and environment requirements.
+- step: '05'
+  title: Interactive execution
+  description: Share compatible public notebooks with Colab or Binder. Browser-only Geo Apps use JavaScript or later JupyterLite.
