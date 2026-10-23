@@ -1,0 +1,10 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
+*.log
+.ipynb_checkpoints/
+__pycache__/
+.env
+.DS_Store

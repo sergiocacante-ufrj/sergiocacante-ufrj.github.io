@@ -1,0 +1,8 @@
+# For demonstrative notebooks and static HTML exports
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+nbformat>=5.9
+nbclient>=0.9
+nbconvert>=7.10
+ipykernel>=6.29

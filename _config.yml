@@ -1,0 +1,68 @@
+title: 'Sergio Cacante | Geotechnical Engineering'
+description: 'Geotechnical engineering, offshore research, numerical modelling and reproducible computational workflows.'
+url: 'https://sergiocacante-ufrj.github.io' # PREVISTO: actualizar si cambia el dominio
+baseurl: '' # Para un repositorio de proyecto: '/nombre-repositorio'
+lang: 'en'
+author:
+  name: 'Sergio E. Cacante Muñoz'
+  role: 'Geotechnical Engineer · Researcher · Computational Geotechnics'
+  location: 'Brazil · Colombia'
+  email: 'scacante@unal.edu.co'
+  github: 'https://github.com/sergiocacante-ufrj'
+  existing_site: 'https://sites.google.com/view/sergiocacante'
+github_username: 'sergiocacante-ufrj'
+github_repo: 'sergiocacante-ufrj.github.io' # Previsto: aún no publicado
+show_colab_links: false # activar cuando se suban los notebooks al repo de arriba
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+sass:
+  style: compressed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  notebooks:
+    output: true
+    permalink: /notebooks/:name/
+  geoapps:
+    output: true
+    permalink: /geo-apps/:name/
+  notes:
+    output: true
+    permalink: /knowledge/:name/
+  presentations:
+    output: true
+    permalink: /presentations/:name/
+defaults:
+  - scope: {path: '', type: projects}
+    values: {layout: item, section: 'Research project'}
+  - scope: {path: '', type: notebooks}
+    values: {layout: notebook, section: 'Computational notebook'}
+  - scope: {path: '', type: geoapps}
+    values: {layout: item, section: 'Geo App'}
+  - scope: {path: '', type: notes}
+    values: {layout: item, section: 'Knowledge note'}
+  - scope: {path: '', type: presentations}
+    values: {layout: item, section: 'Presentation'}
+include:
+  - _pages
+exclude:
+  - README.md
+  - ARQUITECTURA.md
+  - ROADMAP.md
+  - CREDITS.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - requirements-notebooks.txt
+  - vendor
+  - .github
+  - preview
+  - .jekyll-cache
+  - .bundle
+  - '*.zip'
